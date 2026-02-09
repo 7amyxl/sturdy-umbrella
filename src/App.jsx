@@ -5,6 +5,8 @@ import './App.css'
 import Button from './Button.jsx'
 
 function App() {
+  const [display,setDisplay] = useState('');
+  const buttonName = "Click Me";
   return (
     <>
       <div>
@@ -16,8 +18,9 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <h2>{display}</h2>
       <div className="card">
-        
+        <Button countToDisplay={(count) => setDisplay(count)} buttonName ={buttonName}/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -25,7 +28,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <Button />
+      
     </>
   )
 }

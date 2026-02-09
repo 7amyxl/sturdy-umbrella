@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useReducer, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Button from './Button.jsx'
 
 function App() {
-  const [display,setDisplay] = useState('');
+  const [display,setDisplay] = useState(''); // when we need some simple state management we use useState();
   const buttonName = "Click Me";
+
   return (
     <>
       <div>
